@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+$asset-path: "../../assets/images";
+
+$code-font-size: 0.9rem !default;
+$code-font-size-xxxl: 1.2rem;
+$code-header-height: 2.25rem !default;
+$code-dot-size: 0.75rem !default;
+$code-dot-gap: 0.5rem !default;
+$code-icon-width: 1.75rem !default;
+$code-bg: #9000;
+
+$font-family-base: "Patrick Hand", cursive !default;
+$font-size-base: 1.2rem !default;
+$font-size-base-xxxl: 1.5rem;
+
+$icon-menu-size-xxxl: 2rem;
+
+$font-family-code: "Bad Script", cursive;
+
+$font-family-base: 'Metrophobic', sans-serif !default;
+$font-family-heading: ui-sans-serif, 'Microsoft Yahei', sans-serif !default;

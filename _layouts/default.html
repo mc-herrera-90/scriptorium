@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!--FRONT PAGE LAYOUT-->
+<html lang="es">
+  {% include head.html %}
+  <body>
+    <main class="container">
+      <div class="hero text-center my-4">
+          <h1 class="display-5 fw-bold">{{ site.title }}</h1>
+          <p class="">{{ site.description }}</p>
+      </div><!-- end hero -->
+            {% include menu.html %}
+            <div class="content">
+              {{ content }}
+            </div>
+    </main><!-- end container-->
+    {% include footer.html %}
+    <script src="{{ '/assets/js/clipboard.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/clearfix.js' | relative_url }}"></script>
+  </body>
+</html>

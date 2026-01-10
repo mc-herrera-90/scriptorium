@@ -1,0 +1,13 @@
+# Almacenar las colecciones en un solo directorio
+collections_dir: challenges
+# Cada colección es iterable usando for
+collections:
+  js:
+    output: true
+    permalink: /:collection/:name/
+  react:
+    output: true
+    permalink: /:collection/:name/
+
+sass:
+  style: compressed
