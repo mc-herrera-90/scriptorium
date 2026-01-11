@@ -14,8 +14,8 @@ Vas a enfocarte en organizar el documento correctamente usando las etiquetas ese
 ## 📌 Indicaciones
 
 1. Crea un archivo HTML dentro de tu carpeta de trabajo (**index.html** o similar).
-2. Mantén la **estructura mínima de un documento HTML válido**.
-3. El contenido y las secciones del CV (como encabezado, perfil, experiencia, educación y contacto) los completarás más adelante.
+2. Puedes usar un editor de código (Visual Studio Code, Sublime Text) o una plataforma en línea como CodePen.
+3. El contenido y las secciones del CV (como encabezado, perfil, experiencia, educación y contacto) deberán estar estructuradas usando sus correspondientes etiquetas semánticas.
 4. Asegúrate de que la página se renderice correctamente en el navegador.
 ```
 {:file="enunciado"}
