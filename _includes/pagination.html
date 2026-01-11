@@ -1,12 +1,12 @@
 <ul class="pagination" style="gap: 10px">
   <a class="btn btn-outline-secondary {% unless page.previous %}btn--disabled{% endunless %}"
-    href="{% if page.previous %}{{ site.url }}{{ page.previous.url }}#top-page{% else %}#{% endif %}" {% unless
+    href="{% if page.previous %}{{ page.previous.url | relative_url }}#top-page{% else %}#{% endif %}" {% unless
     page.previous %}tabindex="-1" aria-disabled="true" {% endunless %}>
     ANTERIOR
   </a>
 
   <a class="btn btn--primary {% unless page.next %}btn--disabled{% endunless %}"
-    href="{% if page.next %}{{ site.url }}{{ page.next.url }}#top-page{% else %}#{% endif %}" {% unless page.next
+    href="{% if page.next %{{ page.next.url | relative_url  }}#top-page{% else %}#{% endif %}" {% unless page.next
     %}tabindex="-1" aria-disabled="true" {% endunless %}>
     SIGUIENTE
   </a>
