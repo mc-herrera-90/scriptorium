@@ -1,0 +1,75 @@
+// ==========================
+// Breakpoints (LibSass safe)
+// ==========================
+
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 850px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxxl: 1650px,
+);
+
+// Obtener breakpoint por nombre
+@function bp($name) {
+  @return map-get($breakpoints, $name);
+}
+
+// Menor que (strict)
+@mixin lt($width) {
+  @media all and (max-width: ($width - 1px)) {
+    @content;
+  }
+}
+
+// Menor o igual que
+@mixin lte($width) {
+  @media all and (max-width: $width) {
+    @content;
+  }
+}
+
+// Desde breakpoints
+@mixin sm {
+  @media all and (min-width: bp(sm)) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media all and (min-width: bp(md)) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media all and (min-width: bp(lg)) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media all and (min-width: bp(xl)) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media all and (min-width: bp(xxl)) {
+    @content;
+  }
+}
+
+@mixin xxxl {
+  @media all and (min-width: bp(xxxl)) {
+    @content;
+  }
+}
+
+// Entre dos tamaños
+@mixin between($min, $max) {
+  @media all and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
