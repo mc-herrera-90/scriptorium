@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       navigator.clipboard
         .writeText(text)
         .then(() => {
-          button.textContent = "✅ Copiado";
+          button.textContent = "✅";
           setTimeout(() => (button.textContent = "📋"), 1500);
         })
         .catch(() => {

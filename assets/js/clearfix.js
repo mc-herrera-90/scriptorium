@@ -11,12 +11,14 @@ document.addEventListener("DOMContentLoaded", () => {
     el.textContent = el.textContent.replace(/^#{2}\s*(.*)/, "$1");
   });
 });
+
 const menuLinks = document.querySelectorAll("#menu a");
+const currentPath = window.location.pathname;
 
 menuLinks.forEach((link) => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault(); // opcional si no querés que navegue
-    menuLinks.forEach((l) => l.classList.remove("active"));
+  const linkPath = new URL(link.href).pathname;
+
+  if (currentPath.startsWith(linkPath)) {
     link.classList.add("active");
-  });
+  }
 });

@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
-  {% include head.html %}
-  <body class="layout-base">
-    {% include header.html %}
-    <main class="container">
-      <div class="hero text-center my-4">
-      </div><!-- end hero -->
-            {% include menu.html %}
-            <div class="content">
-              {{ content }}
-            </div>
-    </main><!-- end container-->
-    {% include footer.html %}
-    <script src="{{ '/assets/js/clipboard.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/clearfix.js' | relative_url }}"></script>
-  </body>
+{% include head.html %}
+
+<body class="layout-base">
+  {% include header.html %}
+  <main class="container">
+    <div class="hero text-center my-4">
+    </div><!-- end hero -->
+    {% include menu.html %}
+    <div class="content">
+      {{ content }}
+    </div>
+  </main><!-- end container-->
+  {% include footer.html %}
+  <script src="{{ '/assets/js/clipboard.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/clearfix.js' | relative_url }}"></script>
+</body>
+
 </html>

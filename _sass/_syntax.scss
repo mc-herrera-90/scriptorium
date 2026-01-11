@@ -5,18 +5,18 @@ div.highlighter-rouge {
   background: #fffef8;
   padding: 2.3rem 1.8rem 0.8rem 1.8rem;
   line-height: 1.6rem;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.028) 1px,
-    transparent 1px
-  );
+  background-image: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.028) 1px,
+      transparent 1px);
   background-size: 100% 1.6em;
   border-radius: 2px;
 
   box-shadow:
-    /* presión interna */ inset 0 1px 0 rgba(0, 0, 0, 0.08),
+    /* presión interna */
+    inset 0 1px 0 rgba(0, 0, 0, 0.08),
     inset 0 -1px 2px rgba(0, 0, 0, 0.14),
-    /* contacto seco con el fondo */ 0 1px 0 rgba(0, 0, 0, 0.12);
+    /* contacto seco con el fondo */
+    0 1px 0 rgba(0, 0, 0, 0.12);
   transform: rotate(-0.25deg);
 
   &::before {
@@ -37,20 +37,19 @@ div.highlighter-rouge {
 
     z-index: 5;
   }
+
   &::before,
   &::after {
-    background-image: repeating-linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.08) 0px,
-      rgba(0, 0, 0, 0.08) 1px,
-      transparent 1px,
-      transparent 4px
-    );
+    background-image: repeating-linear-gradient(90deg,
+        rgba(0, 0, 0, 0.08) 0px,
+        rgba(0, 0, 0, 0.08) 1px,
+        transparent 1px,
+        transparent 4px);
     /* SOMBRA DE CONTACTO (PEGADO) */
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25), 0 2px 0 rgba(0, 0, 0, 0.12);
   }
 
-  &:not(.language-md) > .highlight > code {
+  &:not(.language-md)>.highlight>code {
     font-family: $font-family-code;
     font-weight: 700;
 
@@ -63,9 +62,11 @@ div.highlighter-rouge {
 
 div[class^="language-"] {
   white-space: pre-wrap;
+
   .highlight {
     transform: rotate(0.3deg);
   }
+
   .code-header {
     $dot-margin: 1rem;
 
@@ -78,21 +79,21 @@ div[class^="language-"] {
       height: $code-dot-size;
       border-radius: 50%;
 
-      background: radial-gradient(
-        circle at 30% 30%,
-        #f5f1ea 0%,
-        #e0dbd2 45%,
-        #bfb8ad 70%,
-        #a9a397 100%
-      );
+      background: radial-gradient(circle at 30% 30%,
+          #f5f1ea 0%,
+          #e0dbd2 45%,
+          #bfb8ad 70%,
+          #a9a397 100%);
 
       box-shadow:
-        /* sombra interna del agujero */ inset 1px 1px 2px
-          rgba(0, 0, 0, 0.35),
+        /* sombra interna del agujero */
+        inset 1px 1px 2px rgba(0, 0, 0, 0.35),
         inset -1px -1px 1px rgba(255, 255, 255, 0.6),
-        /* segundo agujero */ ($code-dot-size + $code-dot-gap) 0 0 #d6d1c7,
+        /* segundo agujero */
+        ($code-dot-size + $code-dot-gap) 0 0 #d6d1c7,
         ($code-dot-size + $code-dot-gap) 0 0 inset,
-        /* tercer agujero */ ($code-dot-size + $code-dot-gap) * 2 0 0 #d6d1c7;
+        /* tercer agujero */
+        ($code-dot-size + $code-dot-gap) * 2 0 0 #d6d1c7;
       filter: contrast(1.05);
     }
   }
@@ -108,10 +109,12 @@ div.language-md {
     font-weight: normal !important;
     font-family: $font-family-base !important;
   }
+
   code {
     color: #37456c;
     font-weight: bolder;
   }
+
   span.gu {
     color: #9f1239;
     display: inline-block;
@@ -126,30 +129,45 @@ div.language-md {
   @include xxxl {
     font-family: $font-size-base-xxxl;
     line-height: $font-size-base-xxxl * 1.25;
+
     span.gu {
       font-size: $h2 * 1.4;
     }
   }
 }
 
+.code-codepen,
 .code-copy {
   position: absolute;
+  z-index: 5;
+  padding: 0.25rem 0.6rem;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  @include xxxl {
+    font-size: 1rem;
+  }
+}
+
+.code-codepen {
+  top: -7px;
+  right: 3.5rem;
+  background: #37456c;
+  transform: rotate(2deg);
+
+}
+
+.code-copy {
   top: -6px;
   right: 14px;
-  z-index: 5;
 
   background: #b03a2e; // tinta roja
   color: #fff;
 
   font-family: "Patrick Hand", cursive;
-  font-size: 0.75rem;
   letter-spacing: 0.03em;
 
-  padding: 0.25rem 0.6rem;
-  border: none;
-  border-radius: 3px;
 
-  cursor: pointer;
 
   transform: rotate(-3deg);
   opacity: 0.95;

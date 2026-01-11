@@ -1,11 +1,11 @@
-<ul class="d-flex list-unstyled justify-content-center" style="gap: 10px">
-  <a class="btn btn-outline-secondary {% unless page.previous %}disabled{% endunless %}"
+<ul class="pagination" style="gap: 10px">
+  <a class="btn btn-outline-secondary {% unless page.previous %}btn--disabled{% endunless %}"
     href="{% if page.previous %}{{ site.url }}{{ page.previous.url }}#top-page{% else %}#{% endif %}" {% unless
     page.previous %}tabindex="-1" aria-disabled="true" {% endunless %}>
     ANTERIOR
   </a>
 
-  <a class="btn btn--primary {% unless page.next %}btn--disabled"{% endunless %}"
+  <a class="btn btn--primary {% unless page.next %}btn--disabled{% endunless %}"
     href="{% if page.next %}{{ site.url }}{{ page.next.url }}#top-page{% else %}#{% endif %}" {% unless page.next
     %}tabindex="-1" aria-disabled="true" {% endunless %}>
     SIGUIENTE

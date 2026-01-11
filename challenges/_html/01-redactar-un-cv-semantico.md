@@ -1,5 +1,5 @@
 ---
-title: "Crea tu primer CV semántico en HTML"
+title: "Reto 01 - Crea tu primer CV semántico en HTML"
 ---
 
 ```md
@@ -11,7 +11,7 @@ El objetivo de este reto es que practiques la **estructura básica de un documen
 
 Vas a enfocarte en organizar el documento correctamente usando las etiquetas esenciales de HTML antes de preocuparte por estilos o contenido detallado. Esto te permitirá construir un CV claro, accesible y con buena estructura desde cero.
 
-### 📌 Indicaciones
+## 📌 Indicaciones
 
 1. Crea un archivo HTML dentro de tu carpeta de trabajo (**index.html** o similar).
 2. Mantén la **estructura mínima de un documento HTML válido**.
@@ -38,3 +38,4 @@ Vas a enfocarte en organizar el documento correctamente usando las etiquetas ese
   </body>
 </html>
 ```
+{:file='index.html'}
