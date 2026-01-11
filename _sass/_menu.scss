@@ -1,0 +1,48 @@
+#menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  gap: 20px;
+
+  a {
+    text-decoration: none;
+    color: #192819;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+
+    svg {
+      fill-opacity: 0;
+      fill: none;
+      stroke: #192819;
+      transition: fill-opacity 0.2s cubic-bezier(0.6, 0, 0.4, 1);
+    }
+
+    /* hover o activo: efecto de pintado */
+    &:hover svg,
+    &.active svg {
+      fill-opacity: 1;
+
+      & * {
+        --icon-js-fill: #f5de19;
+        --icon-react-fill: #0288d1;
+        --icon-html-fill: #e44d26;
+      }
+    }
+  }
+
+  @include xxl {
+    svg {
+      width: $icon-menu-size-xxl;
+      height: $icon-menu-size-xxl;
+    }
+  }
+
+  @include xxxl {
+    svg {
+      width: $icon-menu-size-xxxl;
+      height: $icon-menu-size-xxxl;
+    }
+  }
+}

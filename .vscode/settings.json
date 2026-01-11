@@ -1,0 +1,11 @@
+{
+  // Pretrier
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "[html][liquid]": {
+    "editor.defaultFormatter": "Shopify.theme-check-vscode"
+  },
+  "[markdown]": {
+    "editor.formatOnSave": false
+  }
+}

@@ -1,0 +1,7 @@
+<style>
+    video {
+        width: 100%;
+        border-radius: 8px;
+    }
+</style>
+<video src="{{ include.src }}" controls poster="/media/posters/{{include.poster | append: '.png'}}"></video>

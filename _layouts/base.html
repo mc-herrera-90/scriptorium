@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<!--FRONT PAGE LAYOUT-->
 <html lang="es">
   {% include head.html %}
-  <body>
+  <body class="layout-base">
+    {% include header.html %}
     <main class="container">
       <div class="hero text-center my-4">
-          <h1 class="display-5 fw-bold">{{ site.title }}</h1>
-          <p class="">{{ site.description }}</p>
       </div><!-- end hero -->
             {% include menu.html %}
             <div class="content">

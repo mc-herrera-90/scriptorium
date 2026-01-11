@@ -1,0 +1,15 @@
+<header class="site-header">
+  <div class="container">
+    <!-- Nombre del sitio -->
+    <h1 class="site-logo">
+      {{ site.title }}
+    </h1>
+
+    <!-- Descripción o tagline -->
+    {% if site.description %}
+      <div class="site-description">
+        {{ site.description | markdownify }}
+      </div>
+    {% endif %}
+  </div>
+</header>

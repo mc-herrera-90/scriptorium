@@ -1,7 +1,7 @@
 ---
 title: "Desafío 01 - Copiar al portapapeles"
 description: "Implementa una funcionalidad en JavaScript que permita **copiar texto al portapapeles** usando la **Clipboard API**."
-video: /media/imagenes-mal-optimizadas.mp4
+# video: /media/imagenes-mal-optimizadas.mp4
 poster: "01"
 ---
 
@@ -9,7 +9,6 @@ poster: "01"
 ## Descripción
 
 Implementa una funcionalidad en JavaScript que permita **copiar texto al portapapeles** usando la **Clipboard API**
-
 
 La solución debe cumplir con lo siguiente:
 

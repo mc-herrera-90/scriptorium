@@ -1,0 +1,82 @@
+/* =============================
+   HEADER DEL SITIO
+============================= */
+.site-header {
+  background-color: #fdfcf8e0; // papel cálido
+  border-bottom: 1px dashed #ccc; // línea tipo cuaderno
+  padding: 1.5rem 0;
+  z-index: 9999;
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  /* Título del sitio */
+  .site-logo {
+    font-family: $font-family-title;
+    font-size: $font-size-main-heading;
+    color: #2b2b2b;
+    font-weight: bolder;
+    line-height: 1.2;
+    display: block;
+    margin: 0.85rem 0;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Descripción / tagline */
+  .site-description {
+    font-family: $font-family-base;
+    padding: 0.5rem;
+    /* =============================
+       CODE INLINE SOLO EN EL HEADER
+    ============================== */
+    code {
+      font-family: $font-family-code;
+      font-size: 1.2rem !important;
+      color: #b33b26;
+      background-color: #fff;
+
+      /* Trazo de plumón */
+      -webkit-text-stroke: 0.08rem #c13535;
+
+      /* Padding y espaciado */
+      padding: 0.2rem 0.4rem;
+      display: inline-block;
+      user-select: none;
+
+      /* Borde irregular estilo recorte */
+      border: 2px solid #c13535;
+      border-radius: 0.15rem;
+
+      /* Recorte irregular */
+      clip-path: polygon(0% 0%, 95% 5%, 100% 20%, 90% 100%, 10% 90%, 0% 75%);
+
+      /* Sombra para dar sensación de profundidad */
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+/* =============================
+   RESPONSIVE
+============================= */
+@media all and (max-width: 600px) {
+  .site-header {
+    padding: 1rem 0;
+
+    .site-logo {
+      font-size: 1.5rem;
+    }
+
+    .site-description {
+      font-size: 0.875rem;
+
+      code.language-plaintext.highlighter-rouge {
+        font-size: 0.9rem !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+---
+layout: base
+---
+
+<div class="container">
+  <div class="row">
+    {% include pagination.html %}
+    <h2 class="reto_title mb-4">{{ page.title }}</h2>
+    {% include refactor.html content=content %}
+    {% if page.video %}
+    {% include embed/video.html src=page.video poster=page.poster %}
+    {% endif %}
+    {% include pagination.html %}
+  </div><!--end row-->
+</div><!-- end container-->

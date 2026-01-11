@@ -1,8 +1,8 @@
-<nav class="mb-4" role="navigation">
+<nav role="navigation">
 	<div class="nav justify-content-center" id="menu">
 		{% for collection in site.collections %}
 		{% if collection.output and collection.label != "posts" %}
-		<a class="nav-link d-flex align-items-center" href="{{ site.baseurl }}/{{ collection.label }}">
+		<a class="menu-link" href="{{ site.baseurl }}/{{ collection.label }}">
 			{% include techs/{{ collection.label }}.svg %}&nbsp{{ collection.label | upcase }}
 		</a>
 		{% endif %}
