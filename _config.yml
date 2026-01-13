@@ -36,3 +36,17 @@ defaults:
       type: css
     values:
       layout: challenge
+# comments:
+#   provider: giscus
+#   giscus:
+#     repo: mc-herrera-90/scriptorium # <gh-username>/<repo>
+#     repo_id: R_kgDOQ3aGVQ # <gh-repo-id>
+#     category: General
+#     category_id: DIC_kwDOQ3aGVc4C05O5
+#     mapping: title # optional, default to 'pathname'
+#     data-theme: light
+#     data-lang: es
+#     strict: # optional, default to '0'
+#     input_position: # optional, default to 'bottom'
+#     lang: es # optional, default to the value of `site.lang`
+#     reactions_enabled: # optional, default to the value of `1`
