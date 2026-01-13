@@ -7,7 +7,7 @@ layout: base
 <ul class="collection-list">
   {% assign items = site[page.collection] %}
   {% for item in items %}
-    <li class="item-wrapper">
+    <li class="item-wrapper pen-border">
       <h3 class="item-heading-{{ page.collection }}">
         <a href={{ item.url | relative_url }} class="nav-link">
           {{ item.title }}

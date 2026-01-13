@@ -1,0 +1,31 @@
+	
+
+%pen-border {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid currentColor;
+    border-radius: 18px;
+    transform: rotate(-1.5deg);
+    opacity: 0.7;
+    pointer-events: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    border: 2px solid currentColor;
+    border-radius: 16px;
+    transform: rotate(1deg);
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}
+
+.pen-border {
+
+}

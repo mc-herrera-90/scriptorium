@@ -1,0 +1,9 @@
+.collection-list {
+    border: 1px solid red;
+    padding: 20px 0;
+    list-style: none;
+    .item-wrapper {
+        @extend %pen-border;
+        // padding: 3rem 0;
+    }
+}

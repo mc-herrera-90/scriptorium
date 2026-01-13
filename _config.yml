@@ -12,9 +12,12 @@ collections:
   html:
     output: true
     permalink: /:collection/:name/
+  css:
+    output: true
+    permalink: /:collection/:name/
 
 sass:
-  style: expanded # compressed | expanded
+  style: compressed # compressed | expanded
 
 # Valores por defectos para las colecciones
 defaults:
@@ -26,5 +29,10 @@ defaults:
   - scope:
       path: ""
       type: html
+    values:
+      layout: challenge
+  - scope:
+      path: ""
+      type: css
     values:
       layout: challenge
