@@ -5,12 +5,22 @@ layout: base
 <div class="container">
   <div class="row">
     {% include pagination.html %}
-    <h2 class="reto_title" align="center">{{ page.title }}</h2>
+    {% assign num = page.path | split: '/' | last | slice: 0, 2 %}
+    <h2 class="challenge-title">Reto {{ num }}</h2>
+    {% if page.svg %}
+    <div align="center">
+      {% include {{ page.svg }} %}
+    </div>
+    {% endif %}
+    <h3 class="challenge-subtitle" align="center">{{ page.title }}</h3>
     {% include refactor.liquid content=content %}
     {% if page.video %}
     {% include embed/video.html src=page.video poster=page.poster %}
     {% endif %}
+
     {% include pagination.html %}
   </div><!--end row-->
+  {% if page.comments %}
+  {% include comments.html %}
+  {% endif %}
 </div><!-- end container-->
-{% include comments.html %}

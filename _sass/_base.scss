@@ -3,11 +3,42 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+:root {
+  @include xxxl {
+    padding: 0 20%;
+  }
+  /* Madera */
+  background:
+    /* vetas */
+    repeating-linear-gradient(
+      90deg,
+      rgba(0,0,0,0.035) 0px,
+      rgba(0,0,0,0.035) 1px,
+      transparent 1px,
+      transparent 22px
+    ),
+    /* tablones */
+    repeating-linear-gradient(
+      180deg,
+      #e6d3b1 0px,
+      #e6d3b1 140px,
+      #ddc7a3 140px,
+      #ddc7a3 142px
+    ),
+    /* luz general */
+    linear-gradient(
+      180deg,
+      #f1dfc4,
+      #d6b98c
+    );
+}
 body {
   font-family: $font-family-base;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   background-color: #fdfcf8; // papel cálido
+  min-height: 100vh;
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.6),
       rgba(255, 255, 255, 0.6)

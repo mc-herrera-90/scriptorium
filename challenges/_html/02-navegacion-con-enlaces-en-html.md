@@ -1,5 +1,6 @@
 ---
-title : Reto 02 — Navegación con enlaces en HTML
+title : Navegación con enlaces en HTML
+description: Desafía tus habilidades creando una **navegación clara**, utilizando enlaces para conectar con otras secciones de la página y con recursos externos.
 ---
 
 
@@ -20,6 +21,7 @@ El contenido es libre (puede ser sobre un proyecto, una guía, un sitio personal
 🚫 No usar JavaScript
 🚫 Solo HTML
 ```
+{:file='enunciado'}
 
 ### 🧱 Punto de partida (estructura base)
 
@@ -38,3 +40,4 @@ Usa **únicamente este HTML inicial** y construye el resto desde cero:
   </body>
 </html>
 ```
+{:file='index.html'}

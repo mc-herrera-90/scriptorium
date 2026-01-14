@@ -1,0 +1,9 @@
+.challenge-title {
+    text-align: center;
+    position: relative;
+    width: fit-content;
+    padding: 0 2rem;
+    margin: auto;
+    @extend %marker;
+    z-index: 3;
+}

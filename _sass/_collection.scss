@@ -1,9 +1,54 @@
 .collection-list {
-    border: 1px solid red;
-    padding: 20px 0;
     list-style: none;
     .item-wrapper {
         @extend %pen-border;
+        padding: 30px;
+        margin: 1.2rem;
         // padding: 3rem 0;
+        a {
+            color: currentColor;
+            text-decoration: none;
+        }
+
+        position: relative;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        font-weight: 700;
+
+        &:before {
+            content: attr(num);
+            position: absolute;
+            left: 0;
+            display: inline-flex;
+            align-items: center;
+            color: #121212;
+            font-weight: 700;
+            padding: 0.2em 0.2em;
+            font-size: 2.3rem;
+        }
+        [class^="item-heading"] {
+            letter-spacing: .05em;
+            text-shadow:
+                -1px 0 0 rgba(0,0,0,.45),
+                1px 0 0 rgba(0,0,0,.45),
+                0 -1px 0 rgba(0,0,0,.45),
+                0  1px 0 rgba(0,0,0,.45);
+        }
+        .item-heading-html {
+            color: #e44d27;;
+        }
+        .item-heading-css {
+            color: #663399; 
+        }
+        .item-heading-js {
+            color: #f5de1a;
+                
+        }
+        
     }
+
+    .item-html { --pen-color: #e44d27; }
+    .item-css  { --pen-color: #663399; }
+    .item-js   { --pen-color: #f7df1e; }
+
 }

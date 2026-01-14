@@ -16,7 +16,11 @@ div.highlighter-rouge {
     inset 0 1px 0 rgba(0, 0, 0, 0.08),
     inset 0 -1px 2px rgba(0, 0, 0, 0.14),
     /* contacto seco con el fondo */
-    0 1px 0 rgba(0, 0, 0, 0.12);
+    0 1px 0 rgba(0, 0, 0, 0.12),
+    0 2px 1px #0002,
+    2px 0 1px #0001,
+    0 -1px 1px #0001,
+    -1px 0 1px #0002;
   transform: rotate(-0.25deg);
 
   &::before {
@@ -118,14 +122,16 @@ div.language-md {
   span.gu {
     color: #9f1239;
     display: inline-block;
-    margin: 15px 0;
+    margin: 0;
     font-size: $h2;
   }
 
   span.gs {
     color: #d54770;
   }
-
+  span.p {
+    color: #9f1239;
+  }
   @include xxxl {
     font-family: $font-size-base-xxxl;
     line-height: $font-size-base-xxxl * 1.25;
