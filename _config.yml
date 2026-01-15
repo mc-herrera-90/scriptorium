@@ -2,9 +2,14 @@ title: SCRIPTORIUM
 description: |
   Retos de `<HTML>`, `<CSS>` y `<JS>` sobre un lienzo minimalista,
   pensados para practicar, dominar y pulir tus habilidades como desarrollador web.
+
+url: "https://mc-herrera-90.github.io"
+baseurl: "/scriptorium"
+
 # Almacenar las colecciones en un solo directorio
 collections_dir: challenges
 # Cada colección es iterable usando for
+
 collections:
   js:
     output: true

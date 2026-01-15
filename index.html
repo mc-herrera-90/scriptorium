@@ -7,7 +7,7 @@ title: Home
 
 <div class="grid">
     {% for item in retos %}
-    <a class="grid-item grid-item--{{ item.collection }}" href="{{ item.url }}">
+    <a class="grid-item grid-item--{{ item.collection }}" href="{{ item.url | relative_url }}">
         <div class="grid-icon">
             {% if item.svg %}
             {% include {{ item.svg }} %}

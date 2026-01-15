@@ -1,19 +1,31 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const copyButtons = document.querySelectorAll(".code-copy");
-
-  copyButtons.forEach((button) => {
+  document.querySelectorAll(".code-copy").forEach((button) => {
     button.addEventListener("click", () => {
-      const wrapper = button.closest("div.highlighter-rouge");
+      const wrapper = button.closest(".highlighter-rouge");
       if (!wrapper) return;
 
-      const code = wrapper.querySelector("div.highlight code");
-      if (!code) {
-        console.warn("No se encontró <code> en el wrapper");
-        return;
-      }
+      const code = wrapper.querySelector("code");
+      if (!code) return;
 
-      // Copia el texto plano ignorando los spans de resaltado
-      const text = code.innerText;
+      let text;
+
+      // 👉 solo markdown
+      if (wrapper.classList.contains("language-md")) {
+        // clonar para no tocar el DOM real
+        const clone = code.cloneNode(true);
+
+        // reemplazar cada <img> por su URL en texto
+        clone.querySelectorAll("img").forEach((img) => {
+          const url = img.getAttribute("src") || "";
+          const text = "URL imagen: " + url;
+          img.replaceWith(document.createTextNode(text));
+        });
+
+        text = clone.innerText;
+      } else {
+        // otros lenguajes: copia normal
+        text = code.innerText;
+      }
 
       navigator.clipboard
         .writeText(text)
@@ -22,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
           setTimeout(() => (button.textContent = "📋"), 1500);
         })
         .catch(() => {
-          button.textContent = "❌ Error";
+          button.textContent = "❌";
           setTimeout(() => (button.textContent = "📋"), 1500);
         });
     });

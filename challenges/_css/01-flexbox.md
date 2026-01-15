@@ -12,6 +12,10 @@ El diseño debe permitir ver varios juegos a la vez y adaptarse correctamente a 
 
 Tu tarea es construir el **layout del catálogo usando Flexbox**, de modo que los juegos se organicen de manera clara.
 
+Por ejemplo:
+
+![Distribucion]({{ site.url }}{{ site.baseurl }}/assets/images/demo-reto-flexbox.webp)
+
 ## Requerimientos
 
 1. Crear una sección llamada **“Juegos”**
@@ -26,3 +30,4 @@ Tu tarea es construir el **layout del catálogo usando Flexbox**, de modo que lo
   * Reorganizar los juegos automáticamente al reducir el ancho
   * Mantener separación visual entre los juegos
 ```
+{:file="enunciado"}
