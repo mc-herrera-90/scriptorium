@@ -1,18 +1,17 @@
 .collection-list {
     list-style: none;
     .item-wrapper {
+        
         @extend %pen-border;
         padding: 30px;
-        margin: 1.2rem;
+        margin: 0 1rem 3rem 1rem;
         // padding: 3rem 0;
         a {
             color: currentColor;
             text-decoration: none;
         }
-
         position: relative;
         padding-left: 4rem;
-        padding-right: 4rem;
         font-weight: 700;
 
         &:before {
@@ -34,6 +33,29 @@
                 0 -1px 0 rgba(0,0,0,.45),
                 0  1px 0 rgba(0,0,0,.45);
         }
+
+        .item-footer {
+          position: absolute;
+          height: 80px;
+          width: 80px;
+          top: 0;
+          right: 10px;
+          transform: translateY(-50%);
+          z-index: 3;
+          @include xxl {
+            top: 50%;
+          }
+          svg {
+            width: 100%;
+            height: 100%;
+          }
+
+        }
+        @include xxl {
+          & {
+            padding-right: 85px;
+          }
+        }
         .item-heading-html {
             color: #e44d27;;
         }
@@ -46,9 +68,7 @@
         }
         
     }
-
     .item-html { --pen-color: #e44d27; }
     .item-css  { --pen-color: #663399; }
     .item-js   { --pen-color: #f7df1e; }
-
 }
