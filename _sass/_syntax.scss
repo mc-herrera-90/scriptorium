@@ -151,7 +151,7 @@ div.language-md {
   border: none;
   cursor: pointer;
   @include xxxl {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -160,7 +160,9 @@ div.language-md {
   right: 3.5rem;
   background: #37456c;
   transform: rotate(2deg);
-
+  @include xxxl {
+    margin-right: 1rem;
+  }
 }
 
 .code-copy {

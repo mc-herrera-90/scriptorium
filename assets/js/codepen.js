@@ -1,5 +1,5 @@
 function openCodepenFromBlock(codeBlock) {
-  const code = codeBlock.textContent;
+  const code = codeBlock.querySelector("code").textContent;
 
   let html = "";
   let css = "";
@@ -18,7 +18,7 @@ function openCodepenFromBlock(codeBlock) {
   }
 
   const data = {
-    title: "Ejemplo desde Jekyll",
+    title: "Placeholder",
     html,
     css,
     js,
@@ -40,9 +40,9 @@ function openCodepenFromBlock(codeBlock) {
   form.submit();
   form.remove();
 }
-document.querySelectorAll(".btn-codepen").forEach((btn) => {
+document.querySelectorAll(".code-codepen").forEach((btn) => {
   btn.addEventListener("click", () => {
-    const codeBlock = btn.previousElementSibling.querySelector("code");
-    openCodepenFromBlock(codeBlock);
+    const wrapper = btn.closest(".highlighter-rouge");
+    openCodepenFromBlock(wrapper);
   });
 });
