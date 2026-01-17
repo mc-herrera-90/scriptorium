@@ -31,6 +31,7 @@ defaults:
       type: js
     values:
       layout: challenge
+      comments: true
   - scope:
       path: ""
       type: html
@@ -42,6 +43,7 @@ defaults:
       type: css
     values:
       layout: challenge
+      comments: true
 # comments:
 #   provider: giscus
 #   giscus:

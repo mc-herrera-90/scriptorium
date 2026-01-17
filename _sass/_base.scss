@@ -5,72 +5,38 @@
 }
 
 :root {
-  @include xxxl {
-    padding: 2% 20%;
+  --wood-dark: #bcbcbc;
+  --wood-medium: #bcb2b2;
+  --paper-grain: rgba(0, 0, 0, 0.02);
+    /* Simulación de madera con degradados superpuestos */
+  background: 
+    radial-gradient(circle at 10% 10%, rgba(255,255,255,0.05) 0%, transparent 40%),
+    linear-gradient(135deg, var(--wood-medium) 0%, var(--wood-dark) 100%);
+  background-color: var(--wood-dark);
+  
+  background-image: url("#{$asset-path}/dark-leather.png"); 
+  @include xxl {
+    padding: 1% 15%;
   }
-      background-image: url("#{$asset-path}/background.jpg");
-
-      /* Ajuste de la imagen */
-      background-size: cover;       /* La imagen cubre todo el fondo */
-      background-repeat: no-repeat; /* No se repite */
-      background-position: center;  /* Centrada */
-      background-attachment: fixed;
-      /* Opcional: que el body ocupe toda la pantalla */
-      min-height: 100vh;
-      margin: 0;
-      scroll-behavior: smooth;
-      overflow-y: scroll;
-      -webkit-overflow-scrolling: touch;
-
+  @include xxxl {
+    padding: 1% 16%;
+  }
 
 }
 body {
   font-family: $font-family-base;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
   background-color: #fdfcf8; // papel cálido
   min-height: 100vh;
   background-image: linear-gradient(
-      rgba(255, 255, 255, 0.6),
-      rgba(255, 255, 255, 0.6)
+      rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0.75)
     ),
     url("#{$asset-path}/grid.png");
   background-repeat: repeat;
   background-size: auto;
   color: #2b2b2b;
-  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.04);
   font-size: $font-size-base;
   padding-bottom: 30px;
-  &::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-
-    background-image: repeating-linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.015),
-      rgba(0, 0, 0, 0.015) 1px,
-      transparent 1px,
-      transparent 2px
-    );
-
-    opacity: 0.35;
-    mix-blend-mode: multiply;
-  }
-  &::after {
-    content: "";
-    position: fixed;
-    top: 0;
-    bottom: 0;
-
-    @include xxl {
-      left: 72px;
-    }
-
-    width: 2px;
-    background-color: rgba(220, 80, 80, 0.35);
-  }
   @include xl {
     font-size: $font-size-base-xl;
   }
@@ -79,42 +45,40 @@ body {
   }
   @include xxxl {
     font-size: $font-size-base-xxxl;
+    border-radius: 0 0 3px 6px;
   }
+  box-shadow: 
+    0 1px 2px rgba(0,0,0, 1), 
+    0 4px 8px rgba(0,0,0, 0.5),
+    0 10px 20px rgba(0,0,0,0.04);
 
-  /* 👇 IRREGULARIDAD SUTIL */
-  clip-path: polygon(
-    1% 0.8%, 99% 1%,
-    99.2% 15%, 98.8% 35%,
-    99.1% 55%, 98.7% 75%,
-    99% 99%, 1.2% 99.1%,
-    0.8% 80%, 1.1% 60%,
-    0.9% 40%, 1% 20%
-  );
-
-    /* Sombra realista */
-    box-shadow:
-      0 12px 30px rgba(0,0,0,0.35),
-      inset 0 0 30px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.03);
 }
 
 // MAIN CONTENT
 main {
   position: relative;
   width: 100%;
-  margin: 25px auto;
-
+  margin: 0 auto;
   &::after {
     content: "";
     position: absolute;
     top: 0;
-    left: 2px;
+    bottom: 0;
+    left: 10px;
     width: 2px;
     background-color: rgba(220, 80, 80, 0.35);
   }
+  @include xl {
+    max-width: 900px;
+    padding: 0 .5rem;
+  }
   @include xxl {
     max-width: 950px;
+    padding: 0 1rem;
   }
   @include xxxl {
     max-width: 1100px;
+    padding: 0 1.5rem;
   }
 }
