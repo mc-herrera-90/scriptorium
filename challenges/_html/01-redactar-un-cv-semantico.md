@@ -22,7 +22,9 @@ Vas a enfocarte en organizar el documento correctamente usando las etiquetas ese
 ```
 {:file="enunciado"}
 
-### Placeholder mínimo
+## Boilerplate
+
+Usa **únicamente este HTML inicial** y construye el resto desde cero:
 
 ```html
 <!DOCTYPE html>

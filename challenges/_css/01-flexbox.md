@@ -1,5 +1,6 @@
 ---
 title: Catálogo de Juegos
+description: Demuestra tu dominio de Flexbox creando un catálogo de videojuegos totalmente responsivo.
 ---
 
 ```md

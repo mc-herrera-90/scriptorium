@@ -8,7 +8,7 @@ layout: base
     {% assign num = page.path | split: '/' | last | slice: 0, 2 %}
     <h2 class="challenge-title">Reto {{ num }}</h2>
     {% if page.svg %}
-    <div align="center">
+    <div class="challenge-svg-wrapper">
       {% include {{ page.svg }} %}
     </div>
     {% endif %}

@@ -1,9 +1,23 @@
 .challenge-title {
-    text-align: center;
-    position: relative;
-    width: fit-content;
-    padding: 0 2rem;
-    margin: auto;
-    @extend %marker;
-    z-index: 3;
+  text-align: center;
+  position: relative;
+  width: fit-content;
+  padding: 0 2rem;
+  margin: auto;
+  @extend %marker;
+  z-index: 3;
+}
+.challenge-svg-wrapper {
+  height: 140px;
+  width: 140px;
+  text-align: center;
+  margin: 5px auto;
+  @include xxl {
+    height: 210px;
+    width: 210px;
+  }
+  svg {
+    width: 100%;
+    height: 100%;
+  }
 }

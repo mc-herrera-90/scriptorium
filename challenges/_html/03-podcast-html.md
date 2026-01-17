@@ -20,7 +20,9 @@ Debes utilizar la etiqueta **<audio>** y organizar el contenido con etiquetas se
 {:file='enunciado'}
 
 
-### 🧱 Placeholder mínimo para comenzar
+## Boilerplate
+
+Usa **únicamente este HTML inicial** y construye el resto desde cero:
 
 ```html
 <!DOCTYPE html>
