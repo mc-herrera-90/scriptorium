@@ -11,6 +11,8 @@ El objetivo de este reto es que practiques la **estructura básica de un documen
 
 Vas a enfocarte en organizar el documento correctamente usando las etiquetas esenciales de HTML antes de preocuparte por estilos o contenido detallado. Esto te permitirá construir un CV claro, accesible y con buena estructura desde cero.
 
+![Demo CV]({{ site.url }}{{ site.baseurl }}/assets/images/demo-reto-html-cv.webp)
+
 ## Indicaciones
 
 1. Crea un archivo HTML dentro de tu carpeta de trabajo (**index.html** o similar).
@@ -20,7 +22,7 @@ Vas a enfocarte en organizar el documento correctamente usando las etiquetas ese
 ```
 {:file="enunciado"}
 
-### 🧩 Placeholder mínimo
+### Placeholder mínimo
 
 ```html
 <!DOCTYPE html>
